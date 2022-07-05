@@ -49,3 +49,17 @@ To run without ninja rule:
 export SERENITY_SOURCE_DIR=${PWD}/Build/serenity
 ./Build/ladybird
 ```
+
+## Troubleshooting
+
+If you get errors such as this when trying to load an SSL site (https):
+```
+Loaded 0 CA Certificates
+verify_chain: No trusted root certificate found before end of certificate chain
+verify_chain: Last certificate in chain was signed by ...
+certificate verification failed :(
+null secret
+Possible failure cause(s):
+- No one knows.
+```
+copy `./Build/serenity/Base/etc/ca_certs.ini` to `/etc/ca_certs.ini`
